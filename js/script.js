@@ -4,7 +4,7 @@ createApp({
   data() {
     return {
       //array in cui pushamo tutte le email generate
-      emails: [],
+      emails: []
     }
   },
 

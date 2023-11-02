@@ -13,14 +13,15 @@
 
     <h1>Lista di Email</h1>
 
-    <ul class="emails-group">
+    <ul class="emails-group" v-if="emails.length === emailCount">
       <li 
         class="email"
-        v-for="(email) in emails">
+        v-for="(email) in emails"
+      >
         {{ email }}
       </li>
     </ul>
-
+    
   </div>
 
 

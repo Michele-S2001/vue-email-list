@@ -4,7 +4,8 @@ createApp({
   data() {
     return {
       //array in cui pushamo tutte le email generate
-      emails: []
+      emails: [],
+      emailCount: 10
     }
   },
 
@@ -13,12 +14,12 @@ createApp({
     fetchEmails() {
 
       //richiesta emails
-      for(let i = 0; i < 10; i++) {
+      for(let i = 0; i < this.emailCount; i++) {
         axios
           .get('https://flynn.boolean.careers/exercises/api/random/mail')
           .then((answer) => {
-            this.emails.push(answer.data.response)
-          })
+            this.emails.push(answer.data.response);
+          });
       }
 
     }
